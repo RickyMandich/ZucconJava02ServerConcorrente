@@ -40,8 +40,7 @@ public class TCPServerMain {
                     s1 = server.accept();
 
                     TCPServerThread tcpServerThread = new TCPServerThread(s1, this);
-                    Thread thread = new Thread(tcpServerThread);
-                    thread.start();
+                    tcpServerThread.start();
                 }
 
             } catch (IOException e) {
